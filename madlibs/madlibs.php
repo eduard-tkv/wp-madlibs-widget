@@ -2,26 +2,14 @@
 
 /**
 * Plugin Name: Mad Libs
-* Plugin URI: http://www.deltadigital.ca/wp-plugins/madlibs
+* Plugin URI: http://www.madlibs.info
 * Description: A Wordpress based Mad Libs game
 * Version: 1.0
 * Author: Delta Digital Web Solutions
 * Author URI: http://www.deltadigital.ca
 * License: GPL2
+
 */
-
-/*
-This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
-    published by the Free Software Foundation.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-*/
-
-
 
 function madlib($text)
 {
@@ -54,13 +42,13 @@ function __construct()
 {
 	parent::__construct(
 	// Base ID of your widget
-	'wpb_widget', 
+	'madlibs_widget', 
 
 	// Widget name will appear in UI
-	__('Madlib Widget', 'wpb_widget_domain'), 
+	__('Madlib Widget', 'madlibs_widget_domain'), 
 
 	// Widget description
-	array( 'description' => __( 'Madlib Widget. Replace words to make text funny sounding.', 'wpb_widget_domain' ), ) );
+	array( 'description' => __( 'Madlib Widget. Replace words to make texts sound funny.', 'wpb_widget_domain' ), ) );
 }
 
 
@@ -111,15 +99,18 @@ public function form( $instance )
 }
 	
 // Updating widget replacing old instances with new
-public function update( $new_instance, $old_instance ) {
-$instance = array();
-$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-return $instance;
+public function update( $new_instance, $old_instance ) 
+{
+	$instance = array();
+	$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+	return $instance;
 }
 } // Class wpb_widget ends here
 
 // Register and load the widget
-function wpb_load_widget() {
+function wpb_load_widget() 
+{
 	register_widget( 'wpb_widget' );
 }
+
 add_action( 'widgets_init', 'wpb_load_widget' );
