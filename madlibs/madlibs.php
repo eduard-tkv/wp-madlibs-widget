@@ -23,10 +23,22 @@ function madlib($text)
 	
 	
 	
-	$oWordHere = $_GET["oWordPhp"];
-	$nWordHere = $_GET["nWordPhp"];
+	$oWordHere1 = $_GET["oWordPhp1"];
+	$nWordHere1 = $_GET["nWordPhp1"];
 	
-	$text = str_replace($oWordHere,$nWordHere,$text);
+	$oWordHere2 = $_GET["oWordPhp2"];
+	$nWordHere2 = $_GET["nWordPhp2"];
+	
+	$oWordHere3 = $_GET["oWordPhp3"];
+	$nWordHere3 = $_GET["nWordPhp3"];
+	
+	$oWordHere4 = $_GET["oWordPhp4"];
+	$nWordHere4 = $_GET["nWordPhp4"];
+	
+	$text = str_replace($oWordHere1,$nWordHere1,$text);
+	$text = str_replace($oWordHere2,$nWordHere2,$text);
+	$text = str_replace($oWordHere3,$nWordHere3,$text);
+	$text = str_replace($oWordHere4,$nWordHere4,$text);
 	return $text;
 	
 }
@@ -67,10 +79,24 @@ public function widget( $args, $instance )
 	// This is where you run the code and display the output
 	echo __( 'Substitute', 'wpb_widget_domain' );
 	?>
-		<p><input id="originalWord" type="text" value=""></p>
+		<p><input id="originalWord1" type="text" value=""></p>
 		with
-		<p><input id="newWord" type="text" value=""></p>
-		<p><input type="submit" value="Submit" onclick="replaceW();">&nbsp;<input type="submit" value="Reset" onclick="resetUrl();"></p>
+		<p><input id="newWord1" type="text" value=""></p>
+		AND
+		<p><input id="originalWord2" type="text" value=""></p>
+		with
+		<p><input id="newWord2" type="text" value=""></p>
+		AND
+		<p><input id="originalWord3" type="text" value=""></p>
+		with
+		<p><input id="newWord3" type="text" value=""></p>
+		AND
+		<p><input id="originalWord4" type="text" value=""></p>
+		with
+		<p><input id="newWord4" type="text" value=""></p>
+		
+		<p><input type="submit" value="Submit" onclick="replaceW();">&nbsp;
+		<input type="submit" value="Reset" onclick="resetUrl();"></p>
 	<?php
 	
 	echo $args['after_widget'];
