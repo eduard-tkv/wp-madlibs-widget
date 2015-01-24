@@ -1,16 +1,8 @@
 function replaceW()
 {
-	var oWord1 = document.getElementById("originalWord1").value;
-	var nWord1 = document.getElementById("newWord1").value;
+	var oWord = document.getElementById("originalWord").value;
+	var nWord = document.getElementById("newWord").value;
 	
-	var oWord2 = document.getElementById("originalWord2").value;
-	var nWord2 = document.getElementById("newWord2").value;
-	
-	var oWord3 = document.getElementById("originalWord3").value;
-	var nWord3 = document.getElementById("newWord3").value;
-	
-	var oWord4 = document.getElementById("originalWord4").value;
-	var nWord4 = document.getElementById("newWord4").value;
 	//alert(oWord);
 	//alert(nWord);
 
@@ -20,7 +12,7 @@ function replaceW()
   
   //alert(locationUri);
 
-  window.location.href = locationUri+"&oWordPhp1="+oWord1+"&nWordPhp1="+nWord1+"&oWordPhp2="+oWord2 +"&nWordPhp2="+nWord2+"&oWordPhp3="+oWord3+"&nWordPhp3="+nWord3+"&oWordPhp4="+oWord4+"&nWordPhp4="+nWord4; 
+  window.location.href = locationUri+"&oWordPhp="+oWord +"&nWordPhp="+nWord; 
 	
 
 /*
