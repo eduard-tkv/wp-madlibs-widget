@@ -5,7 +5,7 @@
 * Plugin URI: http://www.madlibs.info
 * Description: A Wordpress based Mad Libs game
 * Version: 1.0
-* Author: Delta Digital Web Solutions
+* Author: Eduard T
 * Author URI: http://www.deltadigital.ca
 * License: GPL2
 
@@ -16,12 +16,6 @@ function madlib($text)
 	
 	$ze_uri = plugins_url();
 	echo '<script type="text/javascript" src="'.$ze_uri.'/madlibs/madlibs.js"></script>';
-	
-	//echo '<script type="text/javascript" src="http://deltadigital.ca/wellness/wp-content/plugins/madlibs/madlibs.js"></script>';
-	
-	//ftp://u44778705-dd@www.deltadigital.ca/wellness/wp-content/plugins/madlibs/madlibs.js
-	
-	
 	
 	$oWordHere = $_GET["oWordPhp"];
 	$nWordHere = $_GET["nWordPhp"];
@@ -41,7 +35,7 @@ class wpb_widget extends WP_Widget {
 function __construct() 
 {
 	parent::__construct(
-	// Base ID of your widget
+	// Base ID of the widget
 	'madlibs_widget', 
 
 	// Widget name will appear in UI
@@ -64,7 +58,7 @@ public function widget( $args, $instance )
 	if ( ! empty( $title ) )
 		echo $args['before_title'] . $title . $args['after_title'];
 
-	// This is where you run the code and display the output
+	// This is where the code is run and output displayed
 	echo __( 'Substitute', 'wpb_widget_domain' );
 	?>
 		<p><input id="originalWord" type="text" value=""></p>
