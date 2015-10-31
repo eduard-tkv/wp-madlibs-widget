@@ -6,14 +6,10 @@ function replaceW()
 	//get the new word, i.e. typed by the user
 	var nWord = document.getElementById("newWord").value;
 	
-	//alert(oWord);
-	//alert(nWord);
   	//create a url with new word and old word passed in it after ?
   	//so that they can be extracted by the php function
         var lastSlash = (window.location.href).lastIndexOf("/");
         var locationUri = (window.location.href).substring(0,lastSlash) + "?";
-  
-        //alert(locationUri);
 
         window.location.href = locationUri+"&oWordPhp="+oWord +"&nWordPhp="+nWord; 
 
@@ -25,12 +21,10 @@ function resetUrl()
 {
 	//find the index of ?
 	var n = window.location.href.indexOf("?"); 
-	//alert(n);
 	
 	//get the url without all arguments after ?
 	var res = window.location.href.substring(0, n); 
 	
-	//alert(res);
 	//go to url
 	window.location.href = res;
 }
