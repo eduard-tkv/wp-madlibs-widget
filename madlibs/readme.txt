@@ -3,4 +3,6 @@ This program is distributed in the hope that it will be useful,but WITHOUT ANY W
 See the GNU General Public License for more details.
 
 Description
-It is a Madlib widget. It lets you substitute words from the original text with your own words.
+It is a Madlibs widget. It lets you substitute words from the original text with your own words.
+
+A working version of this widget can be seen and played with at www.madlibs.info
